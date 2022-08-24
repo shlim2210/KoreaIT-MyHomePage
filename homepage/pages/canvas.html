@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header id="top"></header>
+    <main id="main_content">
+        <div id="canvas_container">
+            <h2>Canvas</h2>
+            <canvas id="canvas" width="700" height="400"></canvas>
+            <div id="canvas_tools">
+                <input type="color" onInput="draw_color=this.value"  id="palette">
+
+                <input type="range" onInput="draw_width=this.value" min="1" max="20" id="line_width">
+
+                <button onclick="onClear()">clear</button>
+                <button onclick="saveImage()">save</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    let canvas = document.getElementById('canvas');
+    let context = canvas.getContext('2d');
+    let palette = document.getElementById('palette');
+    let line_width = document.getElementById('line_width');
+    let tool = new tool_pencil();
+    let i = 0;
+    context.lineWidth = 11;
+    context.lineCap = "round";
+
+    canvas.addEventListener('mousedown', ev_canvas);
+    canvas.addEventListener('mousemove', ev_canvas);
+    canvas.addEventListener('mouseup', ev_canvas);
+    canvas.addEventListener("mouseleave", ev_canvas);
+    palette.addEventListener('input', setColor);
+    line_width.addEventListener('input', setLine);
+
+    function tool_pencil() {
+        let tool_pencil = this;
+        this.started = false;
+
+        // 마우스를 누르는 순간 그리기 작업을 시작
+        this.mousedown = function (ev) {
+        context.beginPath();
+        context.moveTo(ev._x, ev._y);
+        tool_pencil.started = true;
+        };
+        // 마우스가 눌려있다면 마우스가 이동하는 동안 좌표를 계속 호출하여 Canvas에 그림
+        this.mousemove = function (ev) {
+        if (tool_pencil.started) {
+            context.lineTo(ev._x, ev._y);
+            context.stroke();
+        }
+        };
+        // 마우스 떼면 그리기 작업을 중단
+        this.mouseup = function (ev) {
+        if (tool_pencil.started) {
+            tool_pencil.mousemove(ev);
+            tool_pencil.started = false;
+        }
+        };
+        // 마우스가 영역을 벗어나면 그리기 작업을 중단
+        this.mouseleave = function (ev) {
+        if (tool_pencil.started) {
+            tool_pencil.mousemove(ev);
+            tool_pencil.started = false;
+        }
+        };
+    }
+
+    // Canvas요소 내의 실시간 좌표를 결정
+    function ev_canvas(ev) {
+        ev._x = ev.offsetX;
+        ev._y = ev.offsetY;
+
+        // tool의 이벤트 핸들러를 호출
+        let func = tool[ev.type];
+        if (func) {
+        func(ev);
+        }
+    }
+
+    function onClear() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function setColor(){
+        context.strokeStyle = palette.value;
+        console.log(palette.value);
+    }
+
+    function setLine(){
+        context.lineWidth = line_width.value;
+        console.log(line_width.value);
+    }
+
+    function saveImage(){
+        // a태그 생성
+        const a = document.createElement("a");
+        // a 태그의 href=canvas data url
+        a.href = canvas.toDataURL();
+        // a 태그에 다운로드 속성 지정
+        fileName = `image ${i}.png`;
+        a.setAttribute("download", fileName);
+        // body에 a 태그를 생성해서 강제로 실행한 후 태그 삭제
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        i++;
+    }
+
+</script>

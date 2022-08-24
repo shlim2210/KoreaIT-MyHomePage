@@ -1,0 +1,28 @@
+
+
+
+table { border-collapse: collapse;}
+
+thead tr td { border-bottom: 5px solid orangered;}
+
+#signup_title {padding-left: 5px; font-size: 30px; font-weight: bold; }
+#signup_head { font-size: 15px; line-height: 50px; position: relative; top: -5px; left: 20px;}
+
+table tbody tr:first-child td:first-child {width: 250px;}
+table tbody tr td:first-child {padding-left: 20px;}
+
+td { border-bottom: 1px solid rgb(216, 216, 216);  margin: 0;}
+table tfoot td {border-bottom: none;}
+p {margin: 5px 0;}
+
+.signup_subtext { color: rgb(151, 151, 151); font-size: 14px; padding-left: 10px;}
+
+.signup_td img { width: 100px; margin-right: 20px;}
+
+td p.align {display: flex; align-items: center;}
+
+tfoot p input[type="submit"] {position: relative; left: 50px; background-color: orangered; color: white; border: none; border-radius: 5px; width: 200px; height: 50px; font-size: 22px; margin: 10px;}
+
+.red { padding-left: 10px; color: red; font-size: 14px;}
+
+#canvas {border: 1px solid black;}

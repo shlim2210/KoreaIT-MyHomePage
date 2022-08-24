@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="./css/layout.min.css">
+
+    <title>온라인 사진 편집 프로그램  - Pixlr.com 이미지 편집</title>
+</head>
+<body>
+    <header id="config_auth" data-auth="false" data-lang="ko-KR" data-env="true" data-cdn=".">
+        <a id="logo" href="/" title="사진 편집기 Pixlr 홈" aria-label="사진 편집기 Pixlr 홈">
+            <img src="./images/pixlr-logo.svg" class="ic" width="160" height="38" alt="photo editor pixlr" />
+        </a>
+        <a id="login" class="user" title="로그인 또는 사진 편집기에 가입" aria-label="로그인 또는 사진 편집기에 가입"><img src="./img/icon/user.svg" class="ic" width="20" height="20" alt="Login / singn up" title="Login / singn up">회원 가입 로그인</a>
+        <a id="try-premium" class="ppum"><img src="./img/icon/premium-tick.svg" width="20" height="20" alt="Get premium" title="Try premium for free">프리미엄 사용해보기</a>
+
+        <div class="sub-menu" id="app-selector">
+            <div id="app-button"><img src="./img/icon/menu.svg" class="ic" width="20" height="20" alt="pixlr app selector"></div>
+            <div class="drop" id="app-menu">
+
+                <label class="after">웹 앱</label>
+
+                <a class="shortcut" alt="Advanced Photo editor Pixlr E"><img src="./img/misc/e-icon.svg" width="55" height="55" title="Pixlr E photo editor"><span>Pixlr E</span></a>
+                <a class="shortcut" alt="Quick Photo editor and template design Pixlr X"><img src="./img/misc/x-icon.svg" width="55" height="55" title="Pixlr X design maker"><span>Pixlr X</span></a>
+                <a class="shortcut" alt="Remove bg Pixlr background remover"><img src="./img/misc/bg-icon.svg" width="55" height="55" title="Pixlr remove bg background remover"><span style="font-size:11px">Remove BG</span></a>
+                <a class="shortcut-link non-standalone top-10" alt="Pixlr pricing & free trial">
+                    <img src="./img/misc/premium.svg" style="opacity:1" width="26" height="26" alt="Pixlr pricing & free trial" title="Pixlr pricing & free trial">
+                    가격 및 무료 평가판
+                </a>
+
+                <label class="after top-20 non-standalone">기타 플랫폼</label>
+
+                <a class="shortcut-link non-standalone" alt="Pixlr desktop photo editor">
+                    <img src="./img/misc/computer.svg" crossorigin="anonymous" width="26" height="26" alt="Pixlr desktop apps" title="Pixlr desktop apps">
+                    데스크탑 앱
+                </a>
+                <a class="shortcut-link non-standalone" alt="Stories by Pixlr">
+                    <img src="./img/misc/s-icon.svg" style="opacity:1;border-radius:4px;" crossorigin="anonymous" width="26" height="26" alt="Stories by Pixlr" title="Stories by Pixlr">
+                    Pixlr의 이야기
+                </a>
+
+                <label class="after top-20">기타 서비스</label>
+
+                <a href="https://www.pixlrgenesis.com/" class="shortcut-link" rel="follow" target="_new" alt="Pixlr Genesis">
+                    <img src="./img/misc/genesis.svg" width="26" height="26" alt="Pixlr Genesis" title="Pixlr Genesis">
+                    Pixlr Genesis
+                </a>
+                <a href="http://stock.pixlr.com/" class="shortcut-link" rel="follow" target="_new"alt="Stock photos by Pixlr">
+                    <img src="./img/misc/stock.svg" width="26" height="26" alt="Stock by Pixlr" title="Stock by Pixlr">
+                    Pixlr이 제공하는 스톡
+                </a>
+                <a class="shortcut-link" alt="Advanced Photo editor Pixlr E">
+                    <img src="./img/misc/template.svg" width="26" height="26" alt="Pixlr templates" title="Pixlr templates">
+                    Pixlr 템플릿
+                </a>
+
+                <label class="after top-20">도움말 및 학습</label>
+
+                <a href="https://www.youtube.com/c/PixlrStream/" target="_new" rel="nofollow" class="shortcut-link" alt="Pixlr video tutorials">
+                    <img src="./img/misc/youtube.svg" width="26" height="26" alt="Video tutorials" title="Video tutorials">
+                    비디오 자습서
+                </a>
+                <a class="shortcut-link" alt="Pixlr learn and education">
+                    <img src="./img/misc/learn.svg" width="26" height="26" alt="Learn and education" title="Learn and education">
+                    학습 및 교육
+                </a>
+                <a class="shortcut-link" alt="Contact and support">
+                    <img src="./img/misc/support.svg" width="26" height="26" alt="Contact and support" title="Get support">
+                    연락처 지원
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="policies">
+        <span class="text">당사 사이트를 사용함으로써 귀하는 당사의 내용을 읽고 이해했음을 인정합니다. <a>쿠키 정책</a>.</span>
+        <a class="accept">승인 </a>
+    </div>
+
+    <section id="photo-editor-section">
+        <div id="photo-editor-selector" class="align-center">
+            <div id="photo-editor-info" >
+                <h1 class="after center">무료 온라인 사진 편집기 및 디자인 도구인 Pixlr에 오신 것을 환영합니다.</h1>
+                <p>이제 모든 온라인 이미지 편집 요구 사항에 Pixlr을 사용해야 하는 이유가 더 많습니다. 고전적인 데스크탑 스타일의 사진 편집을 원하든 더 현대적인 것을 선호하든 상관없이 저희가 준비했습니다. Pixlr X와 E는 모두 AI 기반 온라인 사진 편집기로 클릭 한 번으로 창의력을 발휘하여 그 어느 때보다 직관적으로 전문적인 사진 편집 작업을 수행할 수 있습니다. bg 리무버로 배경을 제거하거나 탭으로 디자인을 위한 투명한 이미지를 만드십시오. 우리의 차세대 AI 사진 편집 기능을 사용하여 디자인을 더 스마트하고 빠르고 쉽게 만드는 것이 전부입니다. 지금 세계 최고의 클라우드 기반 사진 편집기로 디자인하고 훨씬 더 많은 작업을 수행하십시오. </p>
+            </div>
+        </div>
+        <img id="photo-editing-hero" src="./images/index/hero.webp">
+        <img id="dot-cloud-one" src="./images/index/dotts.png">
+        <img id="dot-cloud-two" src="./images/index/dotts.png">
+        <img id="dot-cloud-three" src="./images/index/dotts.png">
+        <img id="dot-cloud-four" src="./images/index/dotts.png">
+    </section>
+
+    <div class="editor">
+
+        <div class="row-back">
+            <div class="row align-center">
+                <div class="col box-column non-mobile">
+                    <img class="box-x-icon radius-top-20" src="./img/misc/x-ban.svg" alt="Pixlr X">
+                    <a class="box-x-logo"><span>Pixlr X</span></a>
+
+                    <h3>사진 편집, 이제는 간단해요</h3>
+                    <p class="p-text">멋진 템플릿으로 디자인을 시작하세요!</p>
+                    <ul class="features grow-2">
+                        <li>빠르고 모던한 사진 편집 기능을 담았어요! 아마추어에게 추천합니다.</li>
+                        <li>재밌는 효과와 함께 빠른 사진 편집에 어울려요. </li>
+                        <li>대부분의 파일 형식 (PSD, PXD, JPEG, PNG)을 지원해요.</li>
+                        <li>전문적으로 제작된 디자인 템플릿을 사용하여 즉시 콘텐츠를 제작할 수 있습니다.</li>
+                        <li>기성품 레이아웃으로 사진 콜라주를 만드십시오.</li>
+                        <li>원클릭으로 아티스틱 효과를 사진에 입혀보세요.</li>
+                        <li>필수 기능을 빠르게 접해보세요.</li>
+                    </ul>
+                    <a class="button" title="Photo Editor Pixlr X as Express" aria-label="Photo Editor Pixlr X as Express">PIXLR X 시작하기</a>
+                </div>
+                <div class="col box-column non-mobile">
+                    <img class="box-e-icon radius-top-20" src="./img/misc/e-ban.svg" alt="Pixlr E">
+                    <a class="box-e-logo"><span>Pixlr E</span></a>
+                    <h3>전문가처럼 사진을 편집해보세요</h3>
+                    <p class="p-text">고급 사진 편집을 시작하십시오!</p>
+                    <ul class="features grow-2">
+                        <li>클래식 사진 편집 기능을 모두, 가볍게 모았어요.</li>
+                        <li>상세한 이미지 편집 작업에 적합합니다.</li>
+                        <li>대부분의 파일 형식 (PSD, PXD, JPEG, PNG)을 지원해요.</li>
+                        <li>클래식 데스크탑 UI</li>
+                        <li>선택 툴</li>
+                        <li>선택한 요소 자르기, 복사하기, 붙이기 </li>
+                        <li>채우기, 그라데이션 툴</li>
+                        <li>스폰지 / 색상 툴</li>
+                        <li>고급형 스포이트</li>
+                        <li>더 많은 툴로 세밀하게</li>
+                        <li>더 많은 필터 효과 그리고 세밀한 조정 기능.</li>
+                    </ul>
+                    <a class="button teal" title="Photo Editor Pixlr E as Editor" aria-label="Photo Editor Pixlr E as Editor">PIXLR E 시작하기</a>
+                </div>
+                <div class="is-mobile col box-column ">
+                    <img class="box-m-icon radius-top-20" src="./img/misc/m-ban.svg" alt="Pixlr M">
+                    <a class="box-m-logo"><span>Pixlr M</span></a>
+                    <div class="box-row-content">
+                        <h3>Pixlr M 모바일 웹 에디터</h3>
+                        <p>모바일 브라우저에서 즉시 사진을 편집하세요. 설치 또는 다운로드가 모두 불필요! 빠르게 언제 어디서나 전문가처럼 사진을 보정해보세요.</p>
+                        <a class="button" title="Photo mobile editor M" aria-label="Pixlr mobile editor M">PIXLR M 시작하기</a>
+                    </div>
+                </div>
+                <div class="is-mobile col box-column ">
+                    <img class="box-bg-icon radius-top-20" src="./img/misc/bg-ban.svg" alt="remove bg">
+                    <a class="box-bg-logo" title="remove background"><span>Pixlr BG</span></a>
+                    <div class="box-row-content">
+                        <h3>Pixlr AI를 통해 배경 제거하기</h3>
+                        <p>여러 사진에서 b를 제거하고 투명한 이미지를 만들고 싶습니까? 몇 초 만에 자동 및 무료 이미지 배경 제거를 즐기십시오! PIXLR의 최첨단 AI 도구를 사용하면 수동 작업 없이 bg를 제거할 수 있습니다. 사진을 업로드하기만 하면 완료됩니다! 더 이상 배경이 없습니다. 지금 사용해 보세요.</p>
+                        <a class="button top-20 bot-30" title="Remove.bg background remover" aria-label="Remove.bg background remover">PIXLR BG 시작하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="desktop wrapper row align-center top-60 bot-60 non-mobile pad-60">
+        <div class="left half mlr pad-60">
+            <h3 class="text-left bold">Pixlr 데스크탑 앱 다운로드</h3>
+            <p class="top-10 text-left">
+                직관적인 AI 사진 편집 도구, 놀라운 효과 및 필터로 완성됩니다. 언제 어디서나 스마트하고 빠르고 쉽게 이미지를 편집할 수 있습니다. 이제 오프라인 상태에서도 가능합니다. 마스터하기가 매우 쉬우며 매번 전문가 수준의 결과를 제공합니다. 지금 앱을 다운로드하고 탐색을 시작하세요!
+            </p>
+            <div class="install" style="margin-top:50px">
+                <img src="./images/desktop/x-mini-icon.png" width="40" height="40" alt="X icon"/>
+                <a id="download_x" class ="button tab-20" target="_blank" rel="noopener" >
+                    <span class="bold">설치 Pixlr X</span>
+                    <span>
+                        <img class="icon" src="./images/desktop/windows-white.png" alt="os-icon" style="padding-left:14px;padding-top:10px"/>
+                    </span>
+                </a>
+            </div>
+            <div class="install"> 
+                <img src="./images/desktop/e-mini-icon.png" width="40" height="40" alt="E icon"/>
+                <a id="download_e" class ="button teal tab-20" target="_blank" rel="noopener">
+                    <span class="bold">설치 Pixlr E</span>
+                    <span>
+                        <img class="icon" src="./images/desktop/windows-white.png" alt="os-icon" style="padding-left:14px;padding-top:10px"/>
+                    </span>
+                </a>
+            </div>
+            <div class="text-left top-20">
+                <span id="available-text">에서도 사용 가능:</span>
+                <img id="google_play_icon" src="./images/desktop/google-play-black.png" alt="os-icon" style="padding-left:15px"/>
+                <img id="windows_icon" src="./images/desktop/windows-black.png" alt="os-icon" style="padding-left:15px"/>
+            </div>
+        </div>
+        <div class="right half mlr">
+            <img src="./images/desktop/editor-owl.png" alt="desktop-editor">
+        </div>
+    </div>
+
+    <div class="row-back non-mobile">
+        <div class="wrapper row flip">
+            <div class="split-40 pad-60">
+                <h2>배경 제거</h2>
+                <p>사진의 배경을 쉽게 지우세요! 한 번의 클릭으로 즉각적인 AI 기반 배경 제거! 너무 빠르고 너무 쉽습니다. 이제 인물, 셀카, 프로필 사진 등의 배경을 단 몇 초 만에 제거할 수 있습니다.</p>
+                <a class="link heavy underline" title="remove bg AI background removal">배경 제거</a>
+            </div>
+            <div class="split-60 pad-60">
+                <img src="./images/index/remove-bg.webp" class="hero" style="max-width:600px;" loading="lazy" width="1020" height="840" title="remove bg background remover" alt="remove bg background remover">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper footer-container">
+            <div class="footer-message">
+                <img src="./images/pixlr-logo.svg" id="footer-logo" loading="lazy" width="170" height="38" alt="pixlr online design and photo editor">
+                <p>Pixlr by Inmagine은 모든 사람이 쉽게 디자인을 하는 미래를 연다 - 미션과 함께 시작하였습니다. </p>
+
+                <div class="sub-menu" id="language">
+                    <div id="language-button"><img src="./img/icon/language.svg" class="ic" width="28" height="28" alt="Language" title="Set Language"> ko</div>
+                    <div class="drop down list" id="language-menu">
+                        <label class="after small" style="margin:8px 10px 15px 10px;">언어</label>
+                        <div id="language-list">
+                            <a>English</a>
+                            <a>Bahasa Indonesia</a>
+                            <a>Čeština</a>
+                            <a>Dansk</a>
+                            <a>Deutsch</a>
+                            <a>Español</a>
+                            <a>Filipino</a>
+                            <a>Français</a>
+                            <a>Hrvatski</a>
+                            <a>Italiano</a>
+                            <a>Nederlands</a>
+                            <a>Norsk</a>
+                            <a>Polski</a>
+                            <a>Português</a>
+                            <a>Português (Brasileiro)</a>
+                            <a>Romanian</a>
+                            <a>Србија</a>
+                            <a>Русский</a>
+                            <a>Suomi</a>
+                            <a>Svenska</a>
+                            <a>Türkçe</a>
+                            <a>Tiếng Việt</a>
+                            <a>ไทย</a>
+                            <a>Ελληνικά</a>
+                            <a>한국어</a>
+                            <a>日本語</a>
+                            <a>中文</a>
+                            <a>繁體中文</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <ul>
+                    <li class="column-head">회사소개</li>
+                    <li><a title="About Us">서비스 소개</a></li>
+                    
+
+                    <li class="column-head margin">서비스</li>
+                    <li><a title="Photo editor">Pixlr X</a></li>
+                    <li><a title="Photoshop online">Pixlr E</a></li>
+                    <li><a title="Pixlr Desktop">Pixlr Desktop</a>
+                    <li><a title="Stories by Pixlr">Stories by Pixlr</a>
+                    <li><a href="https://www.pixlrgenesis.com/" title="Pixlr Genesis" target="_new">Pixlr Genesis</a>    
+                    <li><a title="Stock by Pixlr">Pixlr 스톡 콘텐츠</a>
+                    <li><a title="Remove background by Pixlr">Remove Background</a>
+                    
+                </ul>
+                <ul>
+                    <li class="column-head">법률</li>
+                    <li><a class="link-spacing">라이선스</a></li>
+                    <li><a>Pixlr 크리에이터 이용약관</a></li>
+                    <li><a>이용약관</a></li>
+                    <li><a>개인정보취급방침</a></li>
+                    <li><a>쿠키 정책</a></li>
+                </ul>
+                <ul>
+                    <li class="column-head">수익창출</li>
+                    <li><a rel="noopener">크리에이터로 참여하세요</a></li>
+
+                    <li class="column-head margin">도움말</li>
+                    <li><a>문의하기</a></li>
+                    <li><a>서비스 가격 안내</a></li>
+                    <li><a>고객지원</a></li>
+                    <li><a title="Learn">배우다</a></li>
+                    <li><a title="Education">교육</a>
+                </ul>
+                <ul>
+                    <li class="column-head">팔로우</li>
+                    <li><a href="https://blog.pixlr.com/" rel="noopener">블로그</a></li>
+                    <li><a href="https://twitter.com/pixlr/" target="_blank" rel="noopener">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/pixlr/" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/pixlr/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/c/PixlrStream/" target="_blank" rel="noopener">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="wrapper family">
+                <a target="_blank" rel="noopener" title="Visit Inmagine.com" href="https://www.inmagine.com/"><img loading="lazy" width="105" height="20" src="./images/footer/inmagine.png" alt="inmagine"></a>
+                <a target="_blank" rel="noopener" title="Visist 123RF.com" href="https://www.123rf.com/"><img loading="lazy" width="104" height="20" src="./images/footer/123rf.png" alt="inmagine group"></a>
+                <a target="_blank" rel="noopener" title="Visit Designs.AI" href="https://designs.ai/"><img loading="lazy" width="100" height="20" src="./images/footer/dsn.png" alt="Design.AI"></a>
+                <a target="_blank" rel="noopener" title="Visit Pixlr.com" href="./"><img loading="lazy" width="90" height="20" src="./images/pixlr-logo.svg" alt="Pixlr.com"></a>
+                <div class="footer-copyright text-right">Pixlr © Inmagine Lab Pte Ltd 2021. 판권 소유.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

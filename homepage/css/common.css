@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+/* global */
+
+@font-face {
+    font-family: blacksword;
+    src: url(./Blacksword.otf);
+}
+
+@font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#bg {
+    background-image: url(../images/guitar0.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header {
+    background: linear-gradient(black, rgb(24, 24, 24), rgb(31, 31, 31), rgba(24, 24, 24, 0)); 
+    position: fixed; 
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a:link {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    text-shadow: 1px 1px 20px rgb(167, 167, 167);
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+}
+
+a:hover {
+    color: rgb(255, 177, 59);  
+    text-shadow: 8px 8px 20px rgb(172, 146, 116);
+    transition: all linear 0.4s;
+}
+
+a:active {
+    color: rgb(255, 153, 0); 
+}
+
+
+/* audio menu common */
+
+#audio_box { 
+    padding-left: 20px; 
+    box-sizing: border-box;
+}
+
+#audio_menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#audio_piano {
+    display: none;
+}
+
+#play_list {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    text-shadow: 1px 1px 20px rgb(167, 167, 167);
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    font-size: 30pt; 
+    font-style: italic; 
+    font-family: bazzi;
+    padding : 40px 0 20px 100px; 
+    box-sizing: border-box; 
+}
+
+#play_list:hover {
+    color: rgb(255, 177, 59);  
+    text-shadow: 8px 8px 20px rgb(172, 146, 116);
+    transition: all linear 0.4s;
+    cursor: pointer;
+}
+
+
+#song_content a:link {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    text-shadow: 1px 1px 5px rgb(87, 87, 87);
+}
+
+#song_content a:visited {color: rgb(255, 255, 255); }
+
+#song_content a:hover {
+    color: rgba(255, 255, 255, 0.700); 
+}
+
+#song_content a:active {color: rgba(32, 32, 32, 0.75);}
+
+.songlist{
+    width: 320px;
+    height: 600px;
+    border: 5px solid rgba(255, 255, 255, 0.205);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+.container_button {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(53, 53, 53);
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.container_button button:hover {
+    cursor: pointer;
+}
+
+.playing .container_button p {
+    margin: 0;
+    line-height: 40px;
+    font-family: bazzi;
+    padding-left: 15px;
+    color: white;
+}
+
+.songs {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.songs .li{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(87, 87, 87); 
+    font-size: 11pt; 
+    font-family: bazzi; 
+}
+
+.songs .li a{
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.songs .li span{
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.inst{
+    font-size: 30px;
+    text-decoration: none; 
+    color: white;
+    text-shadow: 4px 4px 10px rgba(153, 153, 153, 0.75);
+    margin-top: 0;
+    font-family: blacksword;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/* guitar menu */
+#left {
+    float: left;
+    display: none;
+}
+
+.container_button #guitar_play{
+    background: url(../images/play.png) center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    border: none;
+    /* display: none; */
+}
+
+.container_button #guitar_pause{
+    background: url(../images/pause.png) center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    border: none;
+    display: none;
+}
+
+#left .songs .li:hover{
+    background-color: rgb(0, 199, 133);
+}
+
+#left .songs .guitar:hover{
+    cursor: pointer;
+}
+
+
+/* piano menu */
+
+#right {
+    float: right;
+    display: none;
+}
+
+.container_button #piano_play{
+    background: url(../images/play.png) center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    border: none;
+    /* display: none; */
+}
+
+.container_button #piano_pause{
+    background: url(../images/pause.png) center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    border: none;
+    display: none;
+}
+
+#right .songs .li:hover{
+    background-color: rgb(209, 178, 0);
+}
+
+#right .songs .piano:hover{
+    cursor: pointer;
+}
+
+
+/* green background: linear-gradient(rgba(0, 114, 78, 0.1),rgba(0, 114, 78, 0.08), rgba(0, 19, 13, 0)); */
+
+/* yello background: linear-gradient(rgba(51, 114, 0, 0.1),rgba(70, 114, 0, 0.08), rgba(0, 19, 13, 0)); */
+
+
+
+
+/* list menu */
+
+nav {
+    padding: 50px 50px 0 0; 
+    width: 80%; 
+    text-align: right; 
+    box-sizing: border-box;
+    display :flex; 
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: flex-start;
+}
+
+nav>div>a {
+    font-family: bazzi; 
+    font-size: 22px; 
+    padding-left: 40px; 
+    color: white;
+    text-shadow: 1px 1px 20px rgb(167, 167, 167);
+}
+
+nav>div>button {
+    font-family: bazzi; 
+    font-size: 22px; 
+    padding-top: 0;
+    padding-left: 40px; 
+    color: white;
+    text-shadow: 1px 1px 20px rgb(167, 167, 167);
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+
+#change_theme:hover {
+    color: rgb(255, 177, 59);  
+    text-shadow: 8px 8px 20px rgb(172, 146, 116);
+    transition: all linear 0.4s;
+    cursor: pointer;
+}
+
+/* main */
+
+main {
+    width: 100%;
+    margin-top: 100px; 
+    text-align: center; 
+    background: linear-gradient(rgba(240, 248, 255, 0),rgba(240, 248, 25,0),rgba(240, 248, 255, 0.05)); 
+    display: flex;
+}
+
+iframe { 
+    width: 100%; 
+    height:820px; 
+    border: 0px dashed rgba(255, 255, 255, 0); 
+    box-sizing: border-box;
+}

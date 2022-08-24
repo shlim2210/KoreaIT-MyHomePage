@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <title>Sungho's ♪</title>
+    <link rel="stylesheet" href="./css/common.css?ver=1">
+    <link rel="icon" href="./images/note.png">
+    <script src="./js/index.js"></script>
+</head>
+<body id="bg">
+    <header>
+        <section>
+            <div id="audio_menu">
+                <button id="play_list">Playlist</button>
+                <div id="song_content">
+                    <div id="left" class="songlist">
+                        <p class="inst">Guitar</p>
+                        <div class="playing">
+                            <div class="container_button">
+                                <p id="playing_song_guitar">Start</p>
+                                <button id="guitar_play" onclick="guitar_play()"></button>
+                                <button id="guitar_pause" onclick="guitar_pause()"></button>
+                            </div>
+                        </div>
+                        <div class="songs">
+                            <div class="li"><a class="guitar" onclick="guitarStart('Start')">Depapepe - Start</a><span>4:57</span></div>
+                            <div class="li"><a class="guitar" onclick="guitarStart('Rylynn')">Andy McKee - Rylynn</a><span>4:02</span></div>
+                            <div class="li"><a class="guitar" onclick="guitarStart('Time Travel')">Masaaki Kishibe - Time Travel</a><span>4:14</span></div>
+                            <div class="li"><a class="guitar" onclick="guitarStart('Twilight')">Kotaro Oshio - Twilight</a><span>3:50</span></div>
+                        </div>
+                    </div>
+                    <div id="right" class="songlist">
+                        <p class="inst">Piano</p>
+                        <div class="playing">
+                            <div class="container_button">
+                                <p id="playing_song_piano">Summer</p>
+                                <button id="piano_play" onclick="piano_play()"></button>
+                                <button id="piano_pause" onclick="piano_pause()"></button>
+                            </div>
+                        </div>
+                        <div class="songs">
+                            <div class="li"><a class="piano" onclick="pianoStart('Summer')">Joe Hisaishi - Summer</a><span>2:33</span></div>
+                            <div class="li"><a class="piano" onclick="pianoStart('All of Me')">Jon Schmidt - All of Me</a><span>2:58</span></div>
+                            <div class="li"><a class="piano" onclick="pianoStart('Romance')">October - Romance</a><span>3:40</span></div>
+                            <div class="li"><a class="piano" onclick="pianoStart('Croatian Rhapsody')">Maksim Mrvica - Croatian Rhapsody</a><span>2:59</span></div>
+                            <div class="li"><a class="piano" onclick="pianoStart('Nuvole Bianche')">Ludovico Einaudi - Nuvole Bianche</a><span>5:42</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="audio_box">
+                <audio src="./music/Start.mp3" id="audio_guitar" controls loop style="display: none;"></audio>
+                <audio src="./music/Summer.mp3" id="audio_piano" controls loop style="display: none;"></audio>
+                <div style="height: 120px; width: 150px;"></div>
+            </div>
+        </section>
+        <nav>
+            <div><button id="change_theme" onclick="changeTheme()" value="Guitar">Guitar</butt></div>
+            <div><a href="./pages/assignments.html" target="iframe">Assignments</a></div>
+            <div><a href="./pages/open_source.html" target="iframe">Open Source</a></div>
+            <div><a href="./pages/lecture.html" target="iframe">Lecture</a></div>
+        </nav>
+    </header>
+    <main>
+        <iframe name="iframe" src="./pages/main.html"></iframe>
+    </main>
+</body>
+</html>

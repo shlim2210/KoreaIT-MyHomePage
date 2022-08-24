@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+#calendar_monthGrid {margin-top:63px;}
+#calendar_monthGrid:after {display:block; content:""; clear:both;}
+.daygrid_wrap {border-bottom: 1px solid #eee}
+.daygrid_wrap .weekday_text_row {position:relative; width:1180px;}
+.daygrid_wrap .weekday_text_row:after {display:block; content:""; clear:both;}
+.daygrid_wrap .weekday_text_row .weekday_text {float:left; width:168px; height:44px; background-color:#9da0a6; text-align:center; color:#fff; line-height:43px;}
+.daygrid_wrap .weekday_text_row .weekday_text:last-child {width:172px;}
+.daygrid_wrap .daygrid_slider {position:relative;}
+.daygrid_wrap .daygrid_slider:after {display:block; content:""; clear:both;}
+.daygrid_wrap .daygrid_slider .daygrid_date {display:block; position:relative; float:left; width:168px; height:129px; border-right:1px solid #eee; border-top:1px solid #eee; box-sizing:border-box;}
+.daygrid_wrap .daygrid_slider .daygrid_date:last-child {width:172px;border-right: none;}
+.daygrid_wrap .daygrid_slider .daygrid_date input[type="radio"] {display:block; position:absolute; left:0; top:0;}
+.daygrid_wrap .daygrid_slider .daygrid_date label {display:block; width:100%; height:100%; padding:80px 0 0 0; background:none; font-size:17px; color:#222; text-align:center; line-height:inherit; box-sizing:border-box; font-family:'latofont',sans-serif;}
+.daygrid_wrap .daygrid_slider .daygrid_date label:before {display:block; content:""; position:absolute; left:50%; top:36px; width:20px; height:20px; margin-left:-10px; background:url('../image/common/bg_radio.png') 0 0 no-repeat;}
+.daygrid_wrap .daygrid_slider .daygrid_date input[type="radio"]:checked + label {background:none;}
+.daygrid_wrap .daygrid_slider .daygrid_date input[type="radio"]:checked + label:before {background-position:0 -20px;}
+.daygrid_wrap .daygrid_slider .daygrid_date .txt_date {position:absolute; left:18px; top:14px; font-size:20px; color:#000; font-weight:bold; font-family:'latofont',sans-serif;}
+.daygrid_wrap .daygrid_slider .daygrid_date.on {background-color:#db2c73;}
+.daygrid_wrap .daygrid_slider .daygrid_date.econ.on {background-color:#c50251;}
+.daygrid_wrap .daygrid_slider .daygrid_date.busi.on {background-color:#283890;}
+.daygrid_wrap .daygrid_slider .daygrid_date.on .txt_date {color:#fff;}
+.daygrid_wrap .daygrid_slider .daygrid_date.on label {color:#fff; font-size:23px;}
+.daygrid_wrap .daygrid_slider .daygrid_date .txt_label {display:block; position:absolute; right:0; top:0; width:45px; padding:3px 0; background-color:#d60815; font-size:12px; color:#fff; line-height:1; text-align:center;}
+.daygrid_wrap .daygrid_slider .daygrid_date.disabled {background-color:#f7f7f7;}
+.daygrid_wrap .daygrid_slider .daygrid_date.disabled .txt_date {color:#999;}
+.daygrid_wrap .daygrid_slider .daygrid_date.soldout {background-color:#f7f7f7;}
+.daygrid_wrap .daygrid_slider .daygrid_date.soldout .txt_date {color:#999;}
+.daygrid_wrap .daygrid_slider .daygrid_date.soldout .txt {display:block; font-size:14px; color:#737373; text-align:center; line-height:128px;}
+.daygrid_slider.on .daygrid_date {border-top:1px solid #000;box-sizing: border-box;}
+.daygrid_slider.on .daygrid_date:first-child {border-left: 1px solid #000}
+.daygrid_slider.on .daygrid_date:last-child {border-right: 1px solid #000}
+.daygrid_wrap .daygrid_slider .daygrid_date.dayDisabled {background:#f7f7f7}
+.daygrid_wrap .daygrid_slider .daygrid_date.dayDisabled .txt_date {color:#737373}
+.daygrid_wrap .daygrid_slider .daygrid_date.soldOutDisabled .txt_soldout {display:block; font-size:14px; color:#737373; text-align:center; line-height:128px; background:#f7f7f7}
+
+.traveldetails_row {position:relative; z-index:100; float:left; width:1180px; min-height:80px; padding:15px 25px 18px 25px; background-color:#db2c73; border-top:1px solid #db2c73; box-sizing:border-box;	display:none;}
+.traveldetails_row.economy {border-top: 1px solid #c50251;background-color:#c50251;}
+.traveldetails_row.business {border-top: 1px solid #283890;background-color:#283890;}
+.traveldetails_row:after {display:block; content:""; clear:both;}
+.traveldetails_row .location {color:#fff; font-size:16px;}
+.traveldetails_row .location > span {display:inline-block; position:relative;}
+.traveldetails_row .location > span + span {margin-left:10px; padding-left:30px;}
+.traveldetails_row .location > span + span:before {display:block; content:""; position:absolute; left:0; top:4px; width:15px; height:17px; background:url('../image/common/ico_arrow_white.png') 0 0 no-repeat;}
+.traveldetails_row .txt_date {margin-top:3px; color:#fff; font-size:16px;}
+.traveldetails_row .fl{max-width:350px;}
+.traveldetails_row .fr ul {max-width:550px;display:inline-block; vertical-align:middle;}
+.traveldetails_row .fr ul:after {display:block; content:""; clear:both;}
+.traveldetails_row .fr ul li {float:left; margin-right:20px; color:#fff; font-size:16px;}
+
+/* 기내특별서비스 - 달력 */
+#specialMonth_Grid{margin-top:50px;}
+#specialMonth_Grid:after{display:block;content:"";clear:both;}
+.specialday_wrap{border-bottom:1px solid #eee;}
+/* 상단 날짜 변경되는 부분 */
+.specialday_wrap .specialday_header{margin-bottom:20px;}
+.specialday_wrap .specialday_header:after{display:block;content:"";clear:both;}
+.specialday_wrap .specialday_header .month_title{text-align:center;font-family:'latofont';font-size:28px;color:#000;}
+.specialday_wrap .specialday_header .btn_arr_prev{float:left;width:50px;height:50px;background:url(../image/sub/btn_arr_prev.png)0 0 no-repeat;cursor:pointer;}
+.specialday_wrap .specialday_header .btn_arr_next{float:right;width:50px;height:50px;background:url(../image/sub/btn_arr_next.png)0 0 no-repeat;cursor:pointer;}
+/* week 상단 */
+.specialday_wrap .weekday_text_row{width:100%;height:45px;}
+.specialday_wrap .weekday_text_row:after{display:block;content:"";clear:both;}
+.specialday_wrap .weekday_text_row .weekday_text{float:left;width:168px;text-align:center;color:#fff;background-color:#6d6e70;line-height:44px;}
+.specialday_wrap .weekday_text_row .weekday_text:last-child{width:172px;}
+/* 날짜 */
+.specialday_wrap .daygrid_slider{display:table;position:relative;}
+.specialday_wrap .daygrid_slider:after{display:block;content:"";clear:both;}
+.specialday_wrap .daygrid_slider .daygrid_date{position:relative;display:table-cell;padding:50px 14px 15px;width:168px;height:130px;box-sizing:border-box;border-right:1px solid #eee; border-top:1px solid #eee;}
+.specialday_wrap .daygrid_slider .daygrid_date:first-child{border-left:1px solid #eee;}
+.specialday_wrap .daygrid_slider .daygrid_date:last-child{width:172px;}
+.specialday_wrap .daygrid_slider .daygrid_date .txt_date{position:absolute;top:15px;left:14px;font-size:20px;font-family:'latofont';color:#000;}
+.specialday_wrap .daygrid_slider .daygrid_date.dayDisabled{background-color:#f7f7f7;}
+.specialday_wrap .daygrid_slider .daygrid_date.dayDisabled .txt_date{color:#999;}
+.specialday_wrap .daygrid_slider .daygrid_date.not-this-month{background-color:#f7f7f7;}
+.specialday_wrap .daygrid_slider .daygrid_date > .flight{font-size:16px;color:#000;word-break:keep-all;}
+.specialday_wrap .daygrid_slider .daygrid_date > .arrive{font-size:15px;color:#737373;}
+.specialday_wrap .daygrid_slider .daygrid_date > .link_popup{font-size:16px;}

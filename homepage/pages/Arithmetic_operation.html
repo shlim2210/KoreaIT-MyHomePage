@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산 게임</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header id="top"></header>
+    <main id="content">
+    <script>
+        let cnt = 0;
+        let correct = 0;
+        const op = ["+", "-", "*", "/"];
+        const func = {
+        "+" : (num1, num2) => {return num1+num2},
+        "-" : (num1, num2) => {return num1-num2},
+        "*" : (num1, num2) => {return num1*num2},
+        "/" : (num1, num2) => {return Math.floor(num1/num2)}
+        }
+
+        while(correct<10){
+            const num1 = Math.floor(Math.random()*10)+1;
+            const num2 = Math.floor(Math.random()*10)+1;
+            const rand_op = op[Math.floor(Math.random()*4)];
+            cnt++;
+            let prob = Number(prompt(`--${cnt}번 문제-- \n (나눗셈의 경우 소숫점을 제외하고 몫만 입력)
+            \n ${num1} ${rand_op} ${num2} = ?`))
+            if (prob == func[rand_op](num1, num2)){
+                correct++;
+                alert(`정답입니다. [점수 : ${correct} / ${cnt}]`)
+            }else {
+                alert(`오답입니다. [점수 : ${correct} / ${cnt}]`)
+            }
+        }
+    </script>
+    <p class="white bazzi fs50"><script>document.write(`[점수 : ${correct} / ${cnt}]`)</script> ^^</p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+<body>
+    <main id="content">
+        <table id="signup_table">
+            <thead>
+                <tr><td></td><span id="signup_title">*회원가입</span> <span id="signup_head">-아래 필수 입력사항을 모두 입력해 주십시오.</span></td><td></td></tr>
+            </thead>
+            <form action="" name="regform" id="regform" onsubmit="return sendit()">
+                <tbody>
+                    <tr>
+                        <td><p>아이디</p></td>
+                        <td class="signup_td">
+                            <p><input type="text" name="userid" id="userid" maxlength="16" placeholder="ex) apple_1"><span class="red">최소 3자이상 입력하세요.</span></p>
+                            <p class="signup_subtext">*영문자, 숫자, _를 포함. 최소 3자이상 입력하세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>패스워드</p></td>
+                        <td class="signup_td">
+                            <p><input type="password" name="userpw" id="userpw" maxlength="16" placeholder="ex) Apple1!"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>패스워드 확인</p></td>
+                        <td class="signup_td">
+                            <p><input type="password" name="userpw_re" id="userpw_re" maxlength="16" placeholder="ex) Apple1!"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>이름</p></td>
+                        <td class="signup_td">
+                            <p><input type="text" name="username" id="username" placeholder="ex) 김사과" ><span class="signup_subtext">* 공백없이 한글만 입력 가능</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>별명</p></td>
+                        <td class="signup_td">
+                            <p><input type="text" name="nickname" id="nickname" placeholder="ex) appl사과11" ></p>
+                            <p class="signup_subtext">* 공백없이 한글, 영문, 숫자만 입력 가능(한글2글자, 영문4자 이상)</p>
+                            <p class="signup_subtext">* 별명을 바꾸시면 앞으로 60일 이내에는 변경할 수 없습니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>E-mail</p></td>
+                        <td class="signup_td">
+                            <input type="text" name="email" id="email" placeholder="ex) apple@apple.com">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>생년월일</p></td>
+                        <td class="signup_td">
+                            <p><input type="date" id="date"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>성별</p></td>
+                        <td class="signup_td">
+                            <select id="gender">
+                                <option value="unselected">선택하세요</option>
+                                <option value="male">남자</option>
+                                <option value="female">여자</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>홈페이지</p></td>
+                        <td class="signup_td">
+                            <input type="text" name="homepage" id="homepage">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>전화번호</p></td>
+                        <td class="signup_td">
+                            <p><input type="tel" name="usertel" id="usertel"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>핸드폰번호</p></td>
+                        <td class="signup_td">
+                            <p><input type="tel" name="userphone" id="userphone" placeholder="ex) 01011111111"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>주소</p></td>
+                        <td class="signup_td">
+                            <input type="text" name="zipcode" id="sample6_postcode" maxlength="5" readonly> <input type="button" value="검색" id="zipfind" onclick="sample6_execDaumPostcode()"></p>
+                            <p><input type="text" name="address1" id="sample6_address" placeholder="주소"></p>
+                            <p><input type="text" name="address2" id="sample6_detailAddress" placeholder="상세주소"></p>
+                            <p><input type="text" name="address3" id="sample6_extraAddress" placeholder="참고항목"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>서명</p></td>
+                        <td><canvas id="canvas" width="600" height="200"></canvas></td>
+                    </tr>
+                    <tr>
+                        <td><p>자기소개</p></td>
+                        <td>
+                            <div id="editor">
+                                <p></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>메일링서비스</p></td>
+                        <td><p><label><input type="checkbox" checked>정보 메일을 받겠습니다.</label></td>
+                    </tr>
+                    <tr>
+                        <td><p>SMS 수신여부</p></td>
+                        <td><p><label><input type="checkbox" checked>핸드폰 문자메시지를 받겠습니다.</label></td>
+                    </tr>
+                    <tr>
+                        <td><p>정보공개</p></td>
+                        <td><p><label><input type="checkbox" checked>다른 분들이 나의 정보를 볼 수 있도록 합니다.</label>
+                            <p><span class="signup_subtext">정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.</span></p></td>
+                    </tr>
+                    <tr>
+                        <td><p>추천인아이디</p></td>
+                        <td class="signup_td">
+                            <p><input type="text" size="10px" name="recommender" id="recommender"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>자동등록방지</p></td>
+                        <td class="signup_td">
+                            <p class="align"><img src="./signup_pic.png" alt="signup_pic"><input type="text" size="10px"><span class="signup_subtext">* 왼쪽의 글자를 입력하세요.</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td class="end">
+                            <p><input type="submit" name="signup" value="확인">
+                        </td>
+                    </tr>
+                </tfoot>
+            </form>
+        </table>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
